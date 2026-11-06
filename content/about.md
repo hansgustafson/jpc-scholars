@@ -14,7 +14,7 @@ The Jay Phillips Center for Interreligious Studies (JPC) is an academic center i
 ## A word from the director
 
 <blockquote class="pull">
-<p>“The Jay Phillips Center believes that Interreligious Studies is one of the most important emerging fields in higher education today. Religious diversity shapes our communities, our campuses, our conflicts, and our possibilities. Many emerging scholars in this field feel isolated, under-resourced, and uncertain about their professional futures. This program is designed to help with that, not just for these scholars, but for the field itself. By investing deeply in early-career scholars through sustained mentorship, peer community, and national visibility, we hope to help build the infrastructure IRS needs to thrive as an academic discipline.”</p>
+<p>“The Jay Phillips Center supports Interreligious Studies, one of the most important emerging fields in higher education today. Religious diversity shapes our communities, our campuses, our conflicts, and our possibilities. Many emerging scholars in this field feel isolated, under-resourced, and uncertain about their professional futures. This program is designed to help with that, not just for these scholars, but for the field itself. By investing deeply in early-career scholars through sustained mentorship, peer community, and national visibility, we hope to help build the infrastructure IRS needs to thrive as an academic discipline.”</p>
 <cite>Dr. Hans Gustafson, Director, Jay Phillips Center for Interreligious Studies</cite>
 </blockquote>
 
@@ -38,10 +38,10 @@ Across his teaching, scholarship, and leadership, Gustafson is committed to cult
 
 <dl class="facts">
 <dt>Education</dt>
-<dd>Ph.D., Religion, Claremont Graduate University</dd>
-<dd>M.A., Philosophy, Claremont Graduate University</dd>
-<dd>M.A., Theology, University of St. Thomas</dd>
-<dd>B.A., Philosophy &amp; Theology, Boston College</dd>
+<dd>Ph.D., Religion</dd>
+<dd>M.A., Philosophy</dd>
+<dd>M.A., Theology</dd>
+<dd>B.A., Philosophy &amp; Theology</dd>
 <dt>Expertise</dt>
 <dd>Interreligious Studies; Study of Religion; Theology; Religious Identity; Lived Interreligious Relations; Dialogue Methods; Approaches to Religious Diversity; Interreligious Leadership; Civic Religious Pluralism</dd>
 </dl>

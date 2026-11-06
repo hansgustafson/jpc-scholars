@@ -24,6 +24,7 @@ PREVIEW = "--preview" in sys.argv
 
 SITE = yaml.safe_load((ROOT / "site.yml").read_text(encoding="utf-8"))
 HOME = yaml.safe_load((ROOT / "content/home.yml").read_text(encoding="utf-8"))
+TITLES = yaml.safe_load((ROOT / "content/titles.yml").read_text(encoding="utf-8"))
 FAQ = yaml.safe_load((ROOT / "content/faq.yml").read_text(encoding="utf-8"))
 COHORTS = sorted(
     (yaml.safe_load(p.read_text(encoding="utf-8")) for p in (ROOT / "cohorts").glob("*.yml")),
@@ -70,6 +71,19 @@ def front_matter(path):
     return yaml.safe_load(fm), body
 
 
+def titled(html_text):
+    """Italicize (and link, when a url is known) book and journal titles."""
+    slots = []
+    for i, t in enumerate(TITLES):
+        needle = esc(t["title"])
+        if needle not in html_text:
+            continue
+        inner = f"<em>{needle}</em>"
+        slots.append(f'<a href="{esc(t["url"])}">{inner}</a>' if t.get("url") else inner)
+        html_text = html_text.replace(needle, f"\x00{len(slots) - 1}\x00")
+    return re.sub(r"\x00(\d+)\x00", lambda m: slots[int(m.group(1))], html_text)
+
+
 # ---------- people ----------
 
 def initials(name):
@@ -94,7 +108,7 @@ def person_block(p, depth):
         parts.append(f'<blockquote class="voice"><p>“{esc(p["quote"].strip())}”</p></blockquote>')
     bio = p.get("bio") or []
     for para in bio:
-        parts.append(f"<p>{esc(para)}</p>")
+        parts.append(f"<p>{titled(esc(para))}</p>")
     if not bio:
         parts.append('<p class="muted">Full biography coming soon.</p>')
     facts = []
@@ -225,11 +239,11 @@ def build_home():
     ss = cur.get("senior_scholars", [])
     body = f"""
 <div class="home-grid">
-<section class="intro"><h2>A cohort for the field</h2><p>{esc(HOME['intro'])}</p>
+<section class="intro"><h2>About the fellowship</h2><p>{esc(HOME['intro'])}</p>
 <p><a class="text-link" href="{link('fellowship/', d)}">What scholars receive and commit to</a></p></section>
 {call_box(d)}
 </div>
-<section aria-labelledby="g-h"><h2 id="g-h" class="section-title">One year, three gatherings</h2>
+<section aria-labelledby="g-h"><h2 id="g-h" class="section-title">Three signature gatherings</h2>
 <div class="gatherings">{gath}</div></section>
 <section class="current" aria-labelledby="cur-h">
 <div class="section-head"><h2 id="cur-h">The {y} cohort</h2></div>
@@ -259,6 +273,8 @@ def build_md_page(src, path, active, extra_top="", extra_bottom=""):
     d = path.count("/")
     fm, body = front_matter(src)
     content = fill_photos(md(body.replace("{{root}}", "../" * d)), d)
+    if src.endswith("about.md"):
+        content = titled(content)
     write(path + "index.html", page(fm["title"], extra_top + f'<div class="prose">{content}</div>' + extra_bottom, d, active=active, lede=fm.get("lede")))
 
 

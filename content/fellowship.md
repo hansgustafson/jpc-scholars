@@ -55,7 +55,7 @@ A national gathering in Denver (November 21–24, 2026) where scholars attend AI
 ### Scholarly outcomes
 - Optional opportunities to contribute to collaborative scholarly outputs (e.g., edited volume, special issue), emerging organically from cohort interests
 - Short public-facing essay or blog post for the JPC website or other venue
-- Ongoing feedback on individual research projects and manuscript mentorship with the executive editor of the [Journal of Interreligious Studies](https://irstudies.org/index.php/jirs), supporting scholars in developing submission-ready work for peer review
+- Ongoing feedback on individual research projects and manuscript mentorship with the executive editor of the [*Journal of Interreligious Studies*](https://irstudies.org/index.php/jirs), supporting scholars in developing submission-ready work for peer review
 
 ## The year at a glance
 

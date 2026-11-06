@@ -1,0 +1,37 @@
+# Book and journal titles that appear in bios. The build sets each one in
+# italics and links it when a url is given. Put longer titles before shorter
+# titles they contain.
+- title: "Everyday Wisdom: Interreligious Studies in a Pluralistic World"
+  url: https://fortresspress.com/store/product/9781506486949/Everyday-Wisdom
+- title: "Everyday Encounters: Humanizing Dialogue in Theory and Practice"
+  url: https://www.fortresspress.com/store/product/9798889832393/Everyday-Encounters
+- title: "Interreligious Studies: Dispatches from an Emerging Field"
+  url: https://www.baylorpress.com/9781481312547/interreligious-studies/
+- title: "Trinitarian Theology and Power Relations: God Embodied"
+  url: https://www.palgrave.com/gp/book/9781137464774
+- title: "Religious Literacies in Educational Contexts: Interdisciplinary Perspectives"
+  url: https://www.routledge.com/Religious-Literacies-in-Educational-Contexts-Interdisciplinary-Perspectives/MisirHiralall-Soules/p/book/9781032881829
+- title: "Earthly Things"
+  url: https://fordhampress.com/earthly-things-hb-9781531503055.html
+- title: "The Georgetown Companion to Interreligious Studies"
+  url: https://press.georgetown.edu/Book/The-Georgetown-Companion-to-Interreligious-Studies
+# Publisher pages not yet found; italics only until a link is added.
+- title: "Cultural Approaches to Studying Religion: An Introduction to Theories and Methods"
+- title: "The Bloomsbury Reader in Cultural Approaches to the Study of Religion"
+- title: "Rape Culture and Religious Studies: Critical and Pedagogical Engagements"
+- title: "Rape Culture on Campus"
+- title: "Re-membering the Reign of God: The Decolonial Witness of El Salvador's Church of the Poor"
+- title: "Knowing/Seeing Truth: Conceptual Bridges between Kierkegaard and Chan Buddhism"
+- title: "Standup Citizen: American Muslim Humor and the Politics of Secularity"
+- title: "Pedagogy of the Oppressed"
+# Journals and series
+- title: "Journal of the American Academy of Religion"
+- title: "The Journal of Interreligious Studies"
+- title: "Journal of Interreligious Studies"
+- title: "Teaching Theology & Religion"
+- title: "Interreligious Studies and Intercultural Theology"
+- title: "Journal of Ecumenical Studies"
+- title: "Methodist Review"
+- title: "Spotlight on Teaching"
+- title: "Ecclesiology"
+- title: "Theological Studies"
