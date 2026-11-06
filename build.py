@@ -34,7 +34,7 @@ CSS = (ROOT / "assets/site.css").read_text(encoding="utf-8")
 
 NAV = [("fellowship/", "The Fellowship"), ("apply/", "Apply"), ("scholars/", "Scholars"), ("about/", "About")]
 CURRENT = ' aria-current="page"'
-EMAIL_RE = re.compile(r"(?<![\w.@/\"'>])([\w.+-]+@[\w-]+\.[\w.]+\w)")
+EMAIL_RE = re.compile(r"(?<![\w.@/\"':])([\w.+-]+@[\w-]+\.[\w.]+\w)")
 
 
 def esc(s):
