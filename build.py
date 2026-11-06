@@ -8,6 +8,7 @@ Content lives in site.yml, content/, and cohorts/. Photos go in
 assets/images/people/<slug>.jpg (or .png / .webp); anyone without a photo
 gets initials instead.
 """
+import hashlib
 import html
 import re
 import shutil
@@ -49,9 +50,15 @@ def md(text):
     return markdown.markdown(text or "", extensions=["md_in_html", "attr_list", "sane_lists"])
 
 
+# Changes whenever any asset changes, so browsers fetch fresh styles and images.
+VERSION = hashlib.sha1(b"".join(p.read_bytes() for p in sorted((ROOT / "assets").rglob("*")) if p.is_file())).hexdigest()[:8]
+
+
 def link(path, depth):
     """Relative link from a page `depth` folders deep to site path `path`."""
     rel = "../" * depth + path
+    if path.startswith("assets/"):
+        return rel + "?v=" + VERSION
     if PREVIEW and (rel.endswith("/") or rel == ""):
         rel += "index.html"
     return rel or "./"
@@ -170,7 +177,7 @@ def page(title, body, depth, active=None, lede=None, hero=None, main_class=""):
 {body}
 </main>
 <footer class="sitefoot"><div class="wrap foot-grid">
-<div><p class="foot-name">Jay Phillips Center for Interreligious Studies</p><p>University of St. Thomas · St. Paul, Minnesota</p></div>
+<div><a href="{esc(c['jpc_url'])}"><img class="foot-logo" src="{link('assets/images/logos/jpc-st-thomas.png', depth)}" alt="The Jay Phillips Center for Interreligious Studies, University of St. Thomas" width="1280" height="174"></a><p>St. Paul, Minnesota</p></div>
 <div><p>Director: {esc(c['director_name'])}</p><p>{esc(c['program_email'])}</p><p><a href="{esc(c['jpc_url'])}">stthomas.edu/jpc</a></p></div>
 <div><p>In collaboration with the <a href="{esc(c['aiis_url'])}">Association for Interreligious/Interfaith Studies</a></p></div>
 </div></footer>"""

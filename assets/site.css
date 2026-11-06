@@ -164,15 +164,16 @@ details[open] summary::after { content: "−"; }
 .answer ul { margin: 0; padding-left: 1.2em; }
 
 /* footer */
-.sitefoot { background: var(--mist); border-top: 1px solid var(--rule); padding-block: 32px; font-size: 0.93rem; color: var(--muted); }
+.sitefoot { background: #ffffff; border-top: 3px solid #510C76; padding-block: 32px; font-size: 0.93rem; color: var(--muted); }
 .foot-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .foot-grid > div { display: grid; gap: 4px; align-content: start; }
 .foot-name { font-weight: 700; color: var(--ink); }
+.foot-logo { height: 40px; width: auto; display: block; margin-bottom: 6px; }
 .leader { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; align-items: start; background: var(--mist); padding: 28px; border-radius: var(--radius); }
 .leader > div { display: grid; gap: 12px; max-width: 60ch; }
 .partners { display: grid; gap: 14px; justify-items: start; border-top: 1px solid var(--rule); padding-top: 28px; }
 .partner-logos { display: flex; flex-wrap: wrap; gap: 16px 36px; align-items: center; }
-.partner-logos img { height: 36px; width: auto; display: block; }
+.partner-logos img { height: 60px; width: auto; display: block; }
 
 @media (max-width: 860px) {
   .home-grid, .trio, .pair, .foot-grid { grid-template-columns: minmax(0, 1fr); }
