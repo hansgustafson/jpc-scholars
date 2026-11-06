@@ -172,7 +172,7 @@ def page(title, body, depth, active=None, lede=None, hero=None, main_class=""):
 <footer class="sitefoot"><div class="wrap foot-grid">
 <div><p class="foot-name">Jay Phillips Center for Interreligious Studies</p><p>University of St. Thomas · St. Paul, Minnesota</p></div>
 <div><p>Director: {esc(c['director_name'])}</p><p>{esc(c['program_email'])}</p><p><a href="{esc(c['jpc_url'])}">stthomas.edu/jpc</a></p></div>
-<div class="foot-partner"><p>In collaboration with</p><a href="{esc(c['aiis_url'])}"><img src="{link('assets/images/logos/aiis.jpg', depth)}" alt="Association for Interreligious/Interfaith Studies" width="963" height="408"></a></div>
+<div><p>In collaboration with the <a href="{esc(c['aiis_url'])}">Association for Interreligious/Interfaith Studies</a></p></div>
 </div></footer>"""
     if not PREVIEW:
         body_html = EMAIL_RE.sub(r'<a href="mailto:\1">\1</a>', body_html)
@@ -202,19 +202,19 @@ def build_home():
     cur = BY_YEAR[SITE["current_cohort"]]
     y = years(cur["year"])
     c = SITE["contact"]
-    hero = f"""<header class="hero" style="--hero-img: url('{link('assets/images/photos/st-thomas-campus.jpg', d)}')"><div class="wrap">
+    hero = f"""<header class="hero"><div class="wrap">
 <p class="eyebrow">University of St. Thomas · St. Paul, Minnesota</p>
 <h1>{esc(SITE['title'])}</h1>
 <p class="lede">{esc(SITE['tagline'])}</p>
 <div class="hero-cta"><a class="button button-light" href="{link('fellowship/', d)}">About the fellowship</a><a class="text-link light" href="{link('apply/', d)}">How to apply</a></div>
 </div></header>"""
     gath = "".join(
-        f'''<figure class="gathering"><img src="{link('assets/images/photos/' + g['image'], d)}" alt="{esc(g['alt'])}" width="900" height="675" loading="lazy"><figcaption><h3>{esc(g["title"])}</h3><p>{esc(g["text"])}</p></figcaption></figure>'''
+        f'''<figure class="gathering"><img src="{link('assets/images/photos/' + g['image'], d)}" alt="{esc(g['alt'])}" loading="lazy"><figcaption><h3>{esc(g["title"])}</h3><p>{esc(g["text"])}</p></figcaption></figure>'''
         for g in HOME["gatherings"]
     )
     def card(p):
-        return (f'<li><a href="{link("scholars/" + cur["year"] + "/", d)}#{esc(p["slug"])}">{photo(p["slug"], p["name"], d, "card")}'
-                f'<strong>{esc(p["name"].split(",")[0])}</strong><span class="muted">{esc(p["position"].split("|")[0].strip())}</span></a></li>')
+        return (f'<li><a href="{link("scholars/" + cur["year"] + "/", d)}#{esc(p["slug"])}">{photo(p["slug"], p["name"], d, "sm")}'
+                f'<span><strong>{esc(p["name"].split(",")[0])}</strong><span class="muted">{esc(p["position"].split("|")[0].strip())}</span></span></a></li>')
     ss = cur.get("senior_scholars", [])
     body = f"""
 <div class="home-grid">

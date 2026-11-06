@@ -16,19 +16,19 @@ The fellowship brings scholars together through three major engagements during t
 
 <div class="trio" markdown="1">
 <div markdown="1">
-<img src="{{root}}assets/images/photos/virtual-community.jpg" alt="Illustration of a laptop showing a grid of video-call participants" width="900" height="675" loading="lazy">
+<img src="{{root}}assets/images/photos/virtual-community.jpg" alt="Illustration of a laptop showing a grid of video-call participants" loading="lazy">
 
 ### Virtual community
 A sustained online cohort engagement of approximately 3 hours per month, including group dialogue, research exchange, peer coaching, and 2–3 one-on-one mentorship sessions with the senior scholars.
 </div>
 <div markdown="1">
-<img src="{{root}}assets/images/photos/residency.jpg" alt="A stone building with an arched gateway, flower beds, and lawn on the University of St. Thomas campus in St. Paul" width="900" height="675" loading="lazy">
+<img src="{{root}}assets/images/photos/residency.jpg" alt="A stone building with an arched gateway, flower beds, and lawn on the University of St. Thomas campus in St. Paul" loading="lazy">
 
 ### UST residency
 A four-day immersive experience at the University of St. Thomas (March 15–18, 2027) featuring public- and academic-facing presentations, intensive cohort workshops, a public workshop led by the senior scholars, community engagement opportunities, and pedagogy-focused learning. All travel, lodging, and meals are covered.
 </div>
 <div markdown="1">
-<img src="{{root}}assets/images/photos/aar-denver.jpg" alt="The large blue bear sculpture peering into the Colorado Convention Center in Denver" width="900" height="675" loading="lazy">
+<img src="{{root}}assets/images/photos/aar-denver.jpg" alt="The large blue bear sculpture peering into the Colorado Convention Center in Denver" loading="lazy">
 
 ### AAR & AIIS conference
 A national gathering in Denver (November 21–24, 2026) where scholars attend AIIS and AAR events, use their stipend to support travel and registration, and, in collaboration with AIIS, are supported in identifying an appropriate venue to share their work with a scholarly audience while gaining professional visibility and field connections.
