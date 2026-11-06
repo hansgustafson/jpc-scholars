@@ -5,11 +5,46 @@ senior_scholars_heading: Senior Scholar-in-Residence
 senior_scholars:
   - name: Rachel S. Mikva, Ph.D.
     slug: rachel-mikva
-    position: Chicago Theological Seminary
-    # Replace with the bio Rachel provides.
-    bio: []
-    education: []
-    expertise: ""
+    position: >-
+      Herman E. Schaalman Professor of Jewish Studies | Senior Faculty Fellow,
+      InterReligious Institute, Chicago Theological Seminary
+    bio:
+      - >-
+        Rabbi Rachel S. Mikva, Ph.D., is the Herman E. Schaalman Professor of
+        Jewish Studies and Senior Faculty Fellow of the InterReligious
+        Institute at Chicago Theological Seminary. Before returning to the
+        academy, she served for thirteen years as a congregational rabbi in New
+        York and the Chicago area.
+      - >-
+        Her books include Interreligious Studies: An Introduction (Cambridge
+        University Press, 2023), Monotheism and Pluralism (Cambridge University
+        Press, 2024), Dangerous Religious Ideas: The Deep Roots of Self-Critical
+        Faith in Judaism, Christianity, and Islam (Beacon Press, 2020), and
+        Midrash vaYosha: A Medieval Midrash on the Song at the Sea (Mohr
+        Siebeck, 2012). Her definition of Interreligious Studies, quoted in this
+        program's call for applications, centers on the critical analysis of
+        encounters between individuals and communities who orient around
+        religion differently.
+      - >-
+        Mikva has helped build the field's institutions and literature. She
+        serves on the board of the Association for Interreligious/Interfaith
+        Studies, co-chaired the American Academy of Religion's Interreligious
+        and Interfaith Studies Unit from 2019 to 2024, and contributed chapters
+        to Interreligious/Interfaith Studies: Defining a New Field and The
+        Georgetown Companion to Interreligious Studies. She has written on the
+        pedagogy of Interreligious Studies, and her public commentary has
+        appeared in the Washington Post, USA Today, and Religion News Service.
+      - >-
+        For the JPC Scholars, she brings rigorous scholarship on interreligious
+        encounter, close attention to how the field is taught, and long practice
+        carrying that scholarship into congregations and public conversation.
+    education:
+      - Ph.D., Midrash, Scriptural Interpretation and Rabbinic Literature, Jewish Theological Seminary
+      - Rabbinic Ordination and M.A., Hebrew Letters, Hebrew Union College–Jewish Institute of Religion
+      - A.B., Stanford University
+    expertise: >-
+      Interreligious Studies; Jewish Studies; Midrash and Scriptural
+      Interpretation; Interreligious Pedagogy; Religion and Public Life
 
 fellows_heading: 2027–2028 Scholars
 # Leave empty until the cohort is announced.
