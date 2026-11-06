@@ -48,7 +48,12 @@ Across his teaching, scholarship, and leadership, Gustafson is committed to cult
 </div>
 </div>
 
-## Partner
+## Partners
+
+<div class="partner-logos">
+<a href="https://www.aiistudies.org/"><img src="{{root}}assets/images/logos/aiis.jpg" alt="Association for Interreligious/Interfaith Studies" width="963" height="408"></a>
+<a href="https://irstudies.org/index.php/jirs"><img src="{{root}}assets/images/logos/jirs.jpg" alt="Journal of Interreligious Studies" width="640" height="238"></a>
+</div>
 
 The program is offered in collaboration with the [Association for Interreligious/Interfaith Studies (AIIS)](https://www.aiistudies.org/). Manuscript mentorship is offered with the [Journal of Interreligious Studies](https://irstudies.org/index.php/jirs).
 

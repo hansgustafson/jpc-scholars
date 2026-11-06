@@ -74,7 +74,7 @@ def photo(slug, name, depth, size="lg"):
     for ext in ("jpg", "jpeg", "png", "webp"):
         if (ROOT / f"assets/images/people/{slug}.{ext}").exists():
             src = link(f"assets/images/people/{slug}.{ext}", depth)
-            return f'<img class="avatar avatar-{size}" src="{src}" alt="Portrait of {esc(name.split(",")[0])}" loading="lazy">'
+            return f'<img class="avatar avatar-{size}" src="{src}" alt="Portrait of {esc(name.split(",")[0])}" width="600" height="600" loading="lazy">'
     return f'<span class="avatar avatar-{size} monogram" aria-hidden="true">{esc(initials(name))}</span>'
 
 
@@ -162,7 +162,7 @@ def page(title, body, depth, active=None, lede=None, hero=None, main_class=""):
     c = SITE["contact"]
     body_html = f"""<a class="skip" href="#main">Skip to content</a>
 <div class="masthead"><div class="wrap masthead-row">
-<a class="brand" href="{link('', depth)}"><span class="brand-kicker">Jay Phillips Center for Interreligious Studies</span><span class="brand-name">JPC Scholars in Interreligious Studies</span></a>
+<a class="brand" href="{link('', depth)}"><img class="brand-logo" src="{link('assets/images/logos/jpc-st-thomas.png', depth)}" alt="The Jay Phillips Center for Interreligious Studies, University of St. Thomas" width="1280" height="174"><span class="brand-name">Scholars in Interreligious Studies</span></a>
 <nav aria-label="Main">{nav}</nav>
 </div></div>
 {hero}
@@ -172,7 +172,7 @@ def page(title, body, depth, active=None, lede=None, hero=None, main_class=""):
 <footer class="sitefoot"><div class="wrap foot-grid">
 <div><p class="foot-name">Jay Phillips Center for Interreligious Studies</p><p>University of St. Thomas · St. Paul, Minnesota</p></div>
 <div><p>Director: {esc(c['director_name'])}</p><p>{esc(c['program_email'])}</p><p><a href="{esc(c['jpc_url'])}">stthomas.edu/jpc</a></p></div>
-<div><p>In collaboration with the <a href="{esc(c['aiis_url'])}">Association for Interreligious/Interfaith Studies</a></p></div>
+<div class="foot-partner"><p>In collaboration with</p><a href="{esc(c['aiis_url'])}"><img src="{link('assets/images/logos/aiis.jpg', depth)}" alt="Association for Interreligious/Interfaith Studies" width="963" height="408"></a></div>
 </div></footer>"""
     if not PREVIEW:
         body_html = EMAIL_RE.sub(r'<a href="mailto:\1">\1</a>', body_html)
@@ -201,30 +201,49 @@ def build_home():
     d = 0
     cur = BY_YEAR[SITE["current_cohort"]]
     y = years(cur["year"])
-    hero = f"""<header class="hero"><div class="wrap">
-<p class="eyebrow">University of St. Thomas · in collaboration with AIIS</p>
+    c = SITE["contact"]
+    hero = f"""<header class="hero" style="--hero-img: url('{link('assets/images/photos/st-thomas-campus.jpg', d)}')"><div class="wrap">
+<p class="eyebrow">University of St. Thomas · St. Paul, Minnesota</p>
 <h1>{esc(SITE['title'])}</h1>
 <p class="lede">{esc(SITE['tagline'])}</p>
 <div class="hero-cta"><a class="button button-light" href="{link('fellowship/', d)}">About the fellowship</a><a class="text-link light" href="{link('apply/', d)}">How to apply</a></div>
 </div></header>"""
-    gath = "".join(f'<div class="gathering"><h3>{esc(g["title"])}</h3><p>{esc(g["text"])}</p></div>' for g in HOME["gatherings"])
-    roster = "".join(
-        f'<li><a href="{link("scholars/" + cur["year"] + "/", d)}#{esc(f["slug"])}">{photo(f["slug"], f["name"], d, "sm")}<span><strong>{esc(f["name"])}</strong><span class="muted">{esc(f["position"].split("|")[0].strip())}</span></span></a></li>'
-        for f in cur.get("fellows", [])
+    gath = "".join(
+        f'''<figure class="gathering"><img src="{link('assets/images/photos/' + g['image'], d)}" alt="{esc(g['alt'])}" width="900" height="675" loading="lazy"><figcaption><h3>{esc(g["title"])}</h3><p>{esc(g["text"])}</p></figcaption></figure>'''
+        for g in HOME["gatherings"]
     )
+    def card(p):
+        return (f'<li><a href="{link("scholars/" + cur["year"] + "/", d)}#{esc(p["slug"])}">{photo(p["slug"], p["name"], d, "card")}'
+                f'<strong>{esc(p["name"].split(",")[0])}</strong><span class="muted">{esc(p["position"].split("|")[0].strip())}</span></a></li>')
     ss = cur.get("senior_scholars", [])
     body = f"""
 <div class="home-grid">
 <section class="intro"><h2>A cohort for the field</h2><p>{esc(HOME['intro'])}</p>
-<div class="gatherings">{gath}</div>
 <p><a class="text-link" href="{link('fellowship/', d)}">What scholars receive and commit to</a></p></section>
 {call_box(d)}
 </div>
+<section aria-labelledby="g-h"><h2 id="g-h" class="section-title">One year, three gatherings</h2>
+<div class="gatherings">{gath}</div></section>
 <section class="current" aria-labelledby="cur-h">
-<div class="section-head"><h2 id="cur-h">The {y} cohort</h2><p class="muted">{esc(cur['senior_scholars_heading'])}: {esc(join_names(names(ss)))}</p></div>
-<ul class="roster">{roster}</ul>
-<p><a class="text-link" href="{link('scholars/' + cur['year'] + '/', d)}">Meet the {y} scholars</a></p>
+<div class="section-head"><h2 id="cur-h">The {y} cohort</h2></div>
+<h3 class="roster-label">{esc(cur['senior_scholars_heading'])}</h3>
+<ul class="roster roster-senior">{"".join(card(p) for p in ss)}</ul>
+<h3 class="roster-label">Scholars</h3>
+<ul class="roster">{"".join(card(f) for f in cur.get("fellows", []))}</ul>
+<p><a class="text-link" href="{link('scholars/' + cur['year'] + '/', d)}">Read their full profiles</a></p>
 </section>
+<section class="leader" aria-labelledby="l-h">
+{photo("hans-gustafson", "Hans Gustafson", d)}
+<div><h2 id="l-h">Program leadership</h2>
+<p>{esc(HOME['leadership'])}</p>
+<p><a class="text-link" href="{link('about/', d)}#hans-gustafson">About Dr. Gustafson</a></p></div>
+</section>
+<section class="partners" aria-label="Partners">
+<p class="eyebrow">In collaboration with</p>
+<div class="partner-logos">
+<a href="{esc(c['aiis_url'])}"><img src="{link('assets/images/logos/aiis.jpg', d)}" alt="Association for Interreligious/Interfaith Studies" width="963" height="408"></a>
+<a href="{esc(c['jirs_url'])}"><img src="{link('assets/images/logos/jirs.jpg', d)}" alt="Journal of Interreligious Studies" width="640" height="238"></a>
+</div></section>
 """
     write("index.html", page(None, body, d, hero=hero))
 
@@ -232,7 +251,7 @@ def build_home():
 def build_md_page(src, path, active, extra_top="", extra_bottom=""):
     d = path.count("/")
     fm, body = front_matter(src)
-    content = fill_photos(md(body), d)
+    content = fill_photos(md(body.replace("{{root}}", "../" * d)), d)
     write(path + "index.html", page(fm["title"], extra_top + f'<div class="prose">{content}</div>' + extra_bottom, d, active=active, lede=fm.get("lede")))
 
 
