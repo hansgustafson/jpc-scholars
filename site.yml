@@ -1,0 +1,33 @@
+# Site settings. Most yearly updates happen here and in the cohorts/ folder.
+
+title: Jay Phillips Center Scholars in Interreligious Studies
+short_title: JPC Scholars
+tagline: >-
+  A funded year-long fellowship of scholarly inquiry, public engagement, and
+  collaborative formation for emerging scholars in the field of
+  (Inter)religious Studies.
+
+# The cohort currently in its fellowship year. Its page is marked "Current".
+current_cohort: 2026-2027
+
+# The next call for applications.
+#   status: upcoming  (call not open yet; dates may be blank)
+#           open      (form_url must be filled in)
+#           closed    (selection under way)
+call:
+  cohort: 2027-2028
+  status: upcoming
+  form_url: ""
+  # Add dates as they are set. Leave the list empty to show
+  # "Dates will be posted when the call opens."
+  dates: []
+  #  - label: Application release
+  #    date: January 15, 2027
+
+contact:
+  program_email: jpc@stthomas.edu
+  director_name: Dr. Hans Gustafson
+  director_email: hsgustafson@stthomas.edu
+  jpc_url: https://www.stthomas.edu/jpc
+  aiis_url: https://www.aiistudies.org/
+  jirs_url: https://irstudies.org/index.php/jirs

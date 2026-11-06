@@ -1,0 +1,17 @@
+year: 2027-2028
+label: Second cohort
+
+senior_scholars_heading: Senior Scholar-in-Residence
+senior_scholars:
+  - name: Rachel S. Mikva, Ph.D.
+    slug: rachel-mikva
+    position: Chicago Theological Seminary
+    # Replace with the bio Rachel provides.
+    bio: []
+    education: []
+    expertise: ""
+
+fellows_heading: 2027–2028 Scholars
+# Leave empty until the cohort is announced.
+fellows_note: Fellows will be announced after selection.
+fellows: []
