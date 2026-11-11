@@ -28,7 +28,7 @@ A sustained online cohort engagement of approximately 3 hours per month, includi
 A four-day immersive experience at the University of St. Thomas each spring, featuring public- and academic-facing presentations, intensive cohort workshops, a public program led by the Senior Scholar(s), community engagement opportunities, and pedagogy-focused learning. All travel, lodging, and meals are covered.
 </div>
 <div markdown="1">
-<img src="{{root}}assets/images/photos/aar-denver.jpg" alt="The large blue bear sculpture peering into the Colorado Convention Center in Denver" loading="lazy">
+<img src="{{root}}assets/images/photos/aar-washington-dc.jpg" alt="The Lincoln Memorial, Washington Monument, and U.S. Capitol lit at night in Washington, DC" loading="lazy">
 
 ### AAR & AIIS conference
 The national gathering each November, where scholars take part in AIIS and AAR events and, in collaboration with AIIS, are supported in identifying an appropriate venue to share their work with a scholarly audience while gaining professional visibility and field connections.
