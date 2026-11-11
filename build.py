@@ -48,7 +48,9 @@ def years(y):
 
 
 def md(text):
-    return markdown.markdown(text or "", extensions=["md_in_html", "attr_list", "sane_lists"])
+    # {{call_year}} in any page or FAQ answer becomes the next cohort's years.
+    text = (text or "").replace("{{call_year}}", years(SITE["call"]["cohort"]))
+    return markdown.markdown(text, extensions=["md_in_html", "attr_list", "sane_lists"])
 
 
 # Changes whenever any asset changes, so browsers fetch fresh styles and images.
@@ -141,7 +143,13 @@ def call_box(depth, where="home"):
     status = call.get("status", "upcoming")
     dates = call.get("dates") or []
     rows = "".join(f'<li><span>{esc(d["label"])}</span><span>{esc(d["date"])}</span></li>' for d in dates)
-    date_html = f'<ul class="dates">{rows}</ul>' if rows else '<p class="muted">Dates will be posted when the call opens.</p>'
+    date_html = f'<ul class="dates">{rows}</ul>' if rows else '<p class="muted">Application dates will be posted when the call opens.</p>'
+    if where != "home" and call.get("terms"):
+        term_rows = "".join(
+            f'<li><span>{esc(t["label"])}</span><span>{esc(t.get("value")) or "Announced with the call"}</span></li>'
+            for t in call["terms"]
+        )
+        date_html = f'<ul class="dates terms">{term_rows}</ul>' + date_html
     ss_line = ""
     if ss:
         role = "Senior Scholars-in-Residence" if len(ss) > 1 else "Senior Scholar-in-Residence"
@@ -156,8 +164,8 @@ def call_box(depth, where="home"):
     else:
         head = f"The {y} cohort"
         cta = "<p>The call for applications will be posted here.</p>"
-    if where == "home":
-        cta += f' <a class="text-link" href="{link("apply/", depth)}">Eligibility and how to apply</a>'
+    if where != "apply":
+        cta +=f' <a class="text-link" href="{link("apply/", depth)}">Eligibility and how to apply</a>'
     return f'<section class="callbox" aria-labelledby="call-h"><p class="eyebrow">Next cohort</p><h2 id="call-h">{esc(head)}</h2>{ss_line}{date_html}<div class="callbox-cta">{cta}</div></section>'
 
 
@@ -357,7 +365,7 @@ def main():
     OUT.mkdir()
     shutil.copytree(ROOT / "assets", OUT / "assets")
     build_home()
-    build_md_page("content/fellowship.md", "fellowship/", "fellowship/")
+    build_md_page("content/fellowship.md", "fellowship/", "fellowship/", extra_top=call_box(1, "fellowship"))
     build_apply()
     build_md_page("content/about.md", "about/", "about/")
     build_scholars_index()

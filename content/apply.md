@@ -6,7 +6,7 @@ lede: >-
   field.
 ---
 
-<p class="note">Eligibility and requirements below are from the 2026–2027 call. The 2027–2028 call will confirm or update them.</p>
+<p class="note">The box above lists the terms for the next cohort. Eligibility and requirements below apply each year unless the call says otherwise.</p>
 
 ## Eligibility
 
@@ -41,7 +41,7 @@ International scholars are welcome (must be eligible to receive payment from a U
     - What inspires you about the kind of community this cohort could be? What are you seeking from peers in this process, and what are you prepared to offer?
     - Describe your current or intended research in Interreligious Studies or adjacent fields. What questions continue to drive your work, and what contributions do you hope to make to the field going forward?
 3. **Reference contact information:** The name and email address of one reference person (mentor, advisor, colleague, or supervisor) who can speak to your scholarly promise and readiness for this program. We will send your reference a brief online form requesting their support (2–3 questions, approximately 10 minutes to complete).
-4. **Basic information:** contact information; current institutional affiliation and position; career stage (PhD student, postdoc, faculty, etc.); citizenship/visa status (for travel planning); any anticipated scheduling conflicts during the fellowship year.
+4. **Basic information:** contact information; current institutional affiliation and position; career stage (PhD student, postdoc, faculty, etc.); citizenship/visa status (for travel planning); any anticipated scheduling conflicts during the fellowship year; and whether any reviewer has advised you or written a reference for you.
 
 ## Selection criteria
 
@@ -52,8 +52,10 @@ Applications are evaluated on the following (in no particular order):
 - Readiness for collaborative, cohort-based learning
 - Ability to contribute to the program’s dialogical and relational ethos
 - Demonstrated need and potential benefit from mentorship
-- Fit with the senior scholars’ expertise and mentoring approach
+- Fit with the Senior Scholar(s)’ expertise and mentoring approach
 - Engagement with the program’s mission of field-building, public scholarship, and community connection
+
+Three reviewers, including the Senior Scholar-in-Residence and the program director, select the cohort by majority vote. A reviewer who has advised an applicant or written a reference for them does not score that application.
 
 We seek to build a diverse cohort that reflects different career stages, research interests, and backgrounds within Interreligious Studies. The Jay Phillips Center for Interreligious Studies does not discriminate on the basis of race, color, religion, national origin, sex, gender identity, sexual orientation, disability, age, or any other characteristic protected by law.
 

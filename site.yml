@@ -24,6 +24,20 @@ call:
   #  - label: Application release
   #    date: January 15, 2027
 
+  # The year-specific terms, shown in the box at the top of the Fellowship
+  # and Apply pages. Fill in a value when it is decided. A blank value shows
+  # "Announced with the call." Each year, update these lines; the page text
+  # itself does not need to change.
+  terms:
+    - label: Fellowship year
+      value: 2027–28 academic year
+    - label: Stipend
+      value: ""
+    - label: AAR/AIIS Annual Meeting
+      value: ""
+    - label: Residency at St. Thomas
+      value: Four days in spring 2028; week announced with the call
+
 contact:
   program_email: jpc@stthomas.edu
   director_name: Dr. Hans Gustafson
