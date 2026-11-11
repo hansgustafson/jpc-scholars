@@ -20,7 +20,11 @@ call:
   form_url: ""
   # Add dates as they are set. Leave the list empty to show
   # "Dates will be posted when the call opens."
-  dates: []
+  dates:
+    - label: Call opens (anticipated)
+      date: January 15, 2027
+    - label: Application deadline (anticipated)
+      date: March 31, 2027
   #  - label: Application release
   #    date: January 15, 2027
 
