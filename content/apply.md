@@ -37,9 +37,9 @@ International scholars are welcome (must be eligible to receive payment from a U
 
 1. **Curriculum Vitae (CV):** No page limit, but please highlight relevant experiences, research, publications, teaching, and engagement in IRS or related fields.
 2. **Short-answer questions in the application form.** These questions help the selection committee understand the experiences and curiosities that you are bringing to the program, your scholarly vision, and your hopes for this collaborative cohort community. Length: max 2,000 characters (~300 words) per question.
-    - What story, question, or lived experience are you hoping to explore or “figure out” during the fellowship year?
-    - What inspires you about the kind of community this cohort could be? What are you seeking from peers in this process, and what are you prepared to offer?
     - Describe your current or intended research in Interreligious Studies or adjacent fields. What questions continue to drive your work, and what contributions do you hope to make to the field going forward?
+    - What are you seeking from your peers in the cohort and from the fellowship experience? What are you prepared to offer? What do you hope the cohort will do, and what do you hope it can become?
+    - Share a personal story of interreligious encounter that you believe illuminates an important insight about Interreligious Studies.
 3. **Reference contact information:** The name and email address of one reference person (mentor, advisor, colleague, or supervisor) who can speak to your scholarly promise and readiness for this program. We will send your reference a brief online form requesting their support (2–3 questions, approximately 10 minutes to complete).
 4. **Basic information:** contact information; current institutional affiliation and position; career stage (PhD student, postdoc, faculty, etc.); citizenship/visa status (for travel planning); any anticipated scheduling conflicts during the fellowship year; and whether any reviewer has advised you or written a reference for you.
 
